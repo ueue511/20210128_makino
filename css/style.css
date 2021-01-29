@@ -180,7 +180,7 @@ input, select {
 #main-first .main-first-flex div {
   font-size: 12px;
   padding: 12px 0 12px 0;
-  background: rgba(51, 51, 51, 0.5);
+  background: #000;
   line-height: 1.5em;
   color: #f2f2f2;
   width: 60%;
@@ -307,12 +307,12 @@ input, select {
 }
 
 #service .service_content_1 {
-  left: 20%;
+  right: 40%;
   top: 10%;
 }
 
 #service .service_content_2 {
-  right: 20%;
+  left: 40%;
   top: 65%;
 }
 
@@ -415,7 +415,7 @@ input, select {
 /* ----------topページ　contact-------- */
 #contact {
   background-image: url(../img/contact-bg.jpg);
-  height: 300px;
+  /* height: 300px; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
