@@ -1,0 +1,338 @@
+
+/* -------------------*/
+/*        共通項目     */
+/* -------------------*/
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", sans-serif;
+}
+
+div, p, a, h1 {
+    color: #000000;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.a_red:hover {
+    background-color: rgb(219, 7, 46);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: rgb(202, 61, 61);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 1em;
+    width:250px;
+    appearance: none;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 1px;
+    text-align: center;
+}
+
+/* -------------------*/
+/*       header       */
+/* -------------------*/
+header {
+    height: 70px;
+}
+
+.header {
+    height: 70px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content:space-between;
+    position: fixed;
+    z-index: 999;
+}
+
+.header h1 {
+    margin: 3%;
+}
+.header img {
+    height: 20px;
+    width: auto;
+}
+
+.header-link a{
+    padding-right: 1.5em;
+    font-weight: bold;
+}
+
+
+/* -------------------*/
+/*       main mv      */
+/* -------------------*/
+#mv_box {
+    height: 88vh;
+}
+
+.mv {
+    display: flex;
+    background: url(../img/mv.png) center / cover;
+    height: 250px;
+    width: 100%;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    margin-bottom: 80px;
+}
+
+.mv p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* -------------------*/
+/*      recruit       */
+/* -------------------*/
+#recruit {
+    height: 750px;
+}
+
+.recruit_box {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.recruit_box h1 {
+    font-size: 25px;
+    border-bottom: 1px #000 solid;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.recruit_box p {
+    margin-bottom: 20px;
+}
+
+.recruit_box table {
+    width: 950px;
+    margin-bottom: 100px;
+}
+
+.recruit_box td {
+    border: 1px #000 solid;
+    border-collapse:collapse;
+    padding: 15px 0;
+}
+
+.recruit_box tr td:nth-of-type(1) {
+    text-align: center;
+    background-color: #f5f6f9;
+    font-weight: bold;
+}
+
+.recruit_box tr td:nth-of-type(2) {
+    padding-left: 10px;
+}
+
+/* -------------------*/
+/*       contact      */
+/* -------------------*/
+#contact {
+    height: 320px;
+    background-color: rgb(245, 246, 249);
+}
+
+.contact_text {
+    text-align: center;
+    padding-top: 90px;
+}
+
+.contact_text p:nth-of-type(1) {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.contact_text p:nth-of-type(2) {
+    padding-bottom: 60px;
+}
+
+.contact_text .button {
+    padding: 1em 120px;
+}
+/* -------------------*/
+/*        footer      */
+/* -------------------*/
+.footer {
+    height: 60px;
+    position: unset;
+    background-color: #000000;
+}
+
+.footer_box {
+    width: 1100px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.footer p,
+.footer-link a {
+    color:#ffffff;
+    font-size: 12px;
+}
+
+.line_left {
+  margin: 0 10px;
+  width: 1px;
+  background-color: #fff;
+  height: 16px;
+}
+
+.footer-link a{
+    padding-right: 0;
+    font-weight: bold;
+}
+
+/* -------------------*/
+/*     Responsive     */
+/* -------------------*/
+
+
+@media screen and (max-width: 768px) {
+
+/* -------------------*/
+/*        header      */
+/* -------------------*/
+    #hamburger {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        cursor: pointer;
+        z-index: 999;
+        top: 15px;
+        right: 20px;
+        transition: 0.4s;
+        position: fixed;
+    }
+
+    #hamburger span {
+        position: absolute;
+        left: 2px;
+        display: block;
+        width: 35px;
+        height: 4px;
+        background-color: rgb(0, 0, 0);
+        transition: 0.8s;
+    }
+
+    #hamburger span:nth-of-type(1) {
+        top: 5px;
+    }
+    #hamburger span:nth-of-type(2) {
+        top: 20px;
+    }
+    #hamburger span:nth-of-type(3) {
+        top: 35px;
+    }
+
+    .header-link {
+        display: none;
+    }
+
+    .header {
+        z-index: 999;
+    }
+
+    /* -------------------*/
+    /*        mv_box      */
+    /* -------------------*/
+    .mv {
+        background-size: cover;
+    }
+
+    .mv_context {
+        width: auto;
+    }
+
+    .mv_context p:nth-of-type(1) {
+        line-height: 1.5em;
+        margin: 0 20px;
+    }
+
+    /*-------------------*/
+    /*      recruit      */
+    /*-------------------*/
+    .recruit_box,
+    .recruit_box table {
+        width: 85vw;
+    }
+
+    /* -------------------*/
+    /*       contact      */
+    /* -------------------*/
+    .contact_text p:nth-of-type(2) {
+        padding: 0 35px 60px 35px;
+    }
+
+  /*-------------------*/
+    /*      footer       */
+    /*-------------------*/
+    .footer {
+        height: auto;
+    }
+
+    .footer_box {
+        width: 100%;
+        margin: 5% auto;
+    }
+
+    .footer .flex{
+        justify-content:center;
+    }
+
+    .footer_box .flex{
+        display: block;
+    }
+
+    .footer_box p:nth-of-type(1) {
+        margin: 10px;
+    }
+
+    .footer-link {
+        padding-left: 50px;
+    }
+
+    .footer-link a {
+        display: block;
+        margin-bottom: 1.6em;
+    }
+
+    .line_left {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer .flex {
+        display: block;
+        text-align: center;
+    }
+
+    .footer_box p:nth-of-type(1) {
+        margin-bottom: 1.6em;
+    }
+
+    .footer-link {
+        padding-left: 0;
+    }
+}
